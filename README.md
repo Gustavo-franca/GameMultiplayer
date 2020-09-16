@@ -12,11 +12,11 @@ Das tecnologias/ ferramentas usadas:
     
 ### Especificações do Jogo
 Objetivo:
-    * Conseguir encontrar a chave no mapa e entrar na porta para o próximo nivel.
+* Conseguir encontrar a chave no mapa e entrar na porta para o próximo nivel.
 Características:
-    * Terá inimigos no mapa que em caso do personagem bater neles o personagem perde uma vida e retorna ao inicio
-    * Se o personagem morre é game over  e terá que recomeçar do inicio do jogo
-    * As chaves estarão dentro de Baus que podem conter moedas tbm
-    * com as moedas poderá comparar outros personagens
+* Terá inimigos no mapa que em caso do personagem bater neles o personagem perde uma vida e retorna ao inicio
+* Se o personagem morre é game over  e terá que recomeçar do inicio do jogo
+* As chaves estarão dentro de Baus que podem conter moedas tbm
+* com as moedas poderá comparar outros personagens
 
 
