@@ -1,7 +1,7 @@
 # Javascript Game
 
 ## Motivações
-    como no jogo criado em c não segui uma regra design pattern especifico em sua criação acabou tendo muitas entidades acopladas umas as outras. Então este rep servirá para refatorar o código anterior e acrescentar novas funcionalidades.
+como no jogo criado em c não segui uma regra design pattern especifico em sua criação acabou tendo muitas entidades acopladas umas as outras. Então este rep servirá para refatorar o código anterior e acrescentar novas funcionalidades.
 
 ## Do Projeto
     Serão utilizados os design pattern:
