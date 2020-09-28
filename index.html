@@ -11,7 +11,7 @@
     }
 
     #screen{
-        width: 500px;
+        width: 1000px;
         height: 500px;
         image-rendering: pixelated;
         image-rendering: crisp-edges;
@@ -23,10 +23,10 @@
 
 </style>
 <body>
-    <canvas id="screen" height="10" width="10" ></canvas>
+    <canvas id="screen" height="25" width="50" ></canvas>
 </body>
 <script type="module" >
-    import createGame from './game.js';
+    import createGame from './game/index.js';
     import createListenerKeyBoardInput from './listenerKeyBoard.js'
     const game = createGame();
     const listenerKeyBoardInput = createListenerKeyBoardInput();
@@ -35,13 +35,27 @@
     
     function handlePresentationGame(){
        
-        const {player} = game.arena;
+        const {player,objects} = game.arena;
         const screen = document.getElementById('screen');
         const context = screen.getContext('2d');
-        context.clearRect(0,0,10,10);
-        context.fillStyle = 'red';
+        context.clearRect(0,0,game.arena.screen.x,game.arena.screen.y);
+        context.fillStyle = player.color;
         context.fillRect(player.x,player.y,1,1);
-        
+
+        for(const property in objects){
+            handleWallPresentation(objects[property]);
+        }
+        handleWallPresentation(objects["walls"])
+        function handleWallPresentation(walls){
+     
+            walls.forEach((command)=>{
+                const wall = command.wall;
+                context.fillStyle = wall.color;
+                context.fillRect(wall.x,wall.y,1,1);
+            });
+          
+
+        }
         
         requestAnimationFrame(handlePresentationGame);
 
